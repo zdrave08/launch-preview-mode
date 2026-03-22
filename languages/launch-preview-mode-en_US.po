@@ -1,0 +1,75 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Launch Preview Mode 1.2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-22 18:00+0000\n"
+"PO-Revision-Date: 2026-03-22 18:00+0000\n"
+"Last-Translator: OpenAI <support@openai.com>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: launch-preview-mode\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Launch preview mode"
+msgstr "Launch preview mode"
+
+msgid "Keeps this product visible before stock arrives, hides stock notice, disables purchase, and shows the \"NOVO\" badge."
+msgstr "Keeps this product visible before stock arrives, hides stock notice, disables purchase, and shows the \"NOVO\" badge."
+
+msgid "Preview note"
+msgstr "Preview note"
+
+msgid "Optional short text shown on the single product page while this product is in preview mode."
+msgstr "Optional short text shown on the single product page while this product is in preview mode."
+
+msgid "Preview"
+msgstr "Preview"
+
+msgid "No access"
+msgstr "No access"
+
+msgid "Enabled"
+msgstr "Enabled"
+
+msgid "Disabled"
+msgstr "Disabled"
+
+msgid "Disable"
+msgstr "Disable"
+
+msgid "Enable"
+msgstr "Enable"
+
+msgid "All preview statuses"
+msgstr "All preview statuses"
+
+msgid "Preview enabled"
+msgstr "Preview enabled"
+
+msgid "Preview disabled"
+msgstr "Preview disabled"
+
+msgid "You do not have permission to do that."
+msgstr "You do not have permission to do that."
+
+msgid "Enable launch preview mode"
+msgstr "Enable launch preview mode"
+
+msgid "Disable launch preview mode"
+msgstr "Disable launch preview mode"
+
+msgid "Preview products"
+msgstr "Preview products"
+
+msgid "Launch preview mode enabled for %d product."
+msgid_plural "Launch preview mode enabled for %d products."
+msgstr[0] "Launch preview mode enabled for %d product."
+msgstr[1] "Launch preview mode enabled for %d products."
+
+msgid "Launch preview mode disabled for %d product."
+msgid_plural "Launch preview mode disabled for %d products."
+msgstr[0] "Launch preview mode disabled for %d product."
+msgstr[1] "Launch preview mode disabled for %d products."

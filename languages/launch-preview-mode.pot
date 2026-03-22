@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Launch Preview Mode 1.2.2\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-22 18:00+0000\n"
+"PO-Revision-Date: 2026-03-22 18:00+0000\n"
+"Last-Translator: OpenAI <support@openai.com>\n"
+"Language-Team: English\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Domain: launch-preview-mode\n"
+"Language: \n"
+
+msgid "Launch preview mode"
+msgstr ""
+
+msgid "Keeps this product visible before stock arrives, hides stock notice, disables purchase, and shows the \"NOVO\" badge."
+msgstr ""
+
+msgid "Preview note"
+msgstr ""
+
+msgid "Optional short text shown on the single product page while this product is in preview mode."
+msgstr ""
+
+msgid "Preview"
+msgstr ""
+
+msgid "No access"
+msgstr ""
+
+msgid "Enabled"
+msgstr ""
+
+msgid "Disabled"
+msgstr ""
+
+msgid "Disable"
+msgstr ""
+
+msgid "Enable"
+msgstr ""
+
+msgid "All preview statuses"
+msgstr ""
+
+msgid "Preview enabled"
+msgstr ""
+
+msgid "Preview disabled"
+msgstr ""
+
+msgid "You do not have permission to do that."
+msgstr ""
+
+msgid "Enable launch preview mode"
+msgstr ""
+
+msgid "Disable launch preview mode"
+msgstr ""
+
+msgid "Preview products"
+msgstr ""
+
+msgid "Launch preview mode enabled for %d product."
+msgid_plural "Launch preview mode enabled for %d products."
+msgstr[0] ""
+msgstr[1] ""
+
+msgid "Launch preview mode disabled for %d product."
+msgid_plural "Launch preview mode disabled for %d products."
+msgstr[0] ""
+msgstr[1] ""
