@@ -1,0 +1,35 @@
+.lpm-badge {
+	display: inline-block;
+	background: #111;
+	color: #fff;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 1;
+	padding: 8px 10px;
+	border-radius: 4px;
+	margin: 0 0 10px;
+	letter-spacing: 0.5px;
+	text-transform: uppercase;
+	z-index: 9;
+	position: relative;
+}
+
+.lpm-badge-single {
+	position: absolute;
+	top: 16px;
+	left: 16px;
+}
+
+.lpm-preview-note {
+	margin: 16px 0;
+	padding: 14px 16px;
+	background: #f7f7f7;
+	border-left: 4px solid #111;
+	font-size: 14px;
+	line-height: 1.6;
+}
+
+.lpm-hidden-stock,
+.stock.lpm-hidden-stock {
+	display: none !important;
+}
