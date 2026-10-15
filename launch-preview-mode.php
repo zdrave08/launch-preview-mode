@@ -3,7 +3,7 @@
  * Plugin Name: Launch Preview Mode
  * Plugin URI: https://github.com/bitwisesoftware/launch-preview-mode
  * Description: Allows selected products to stay visible before stock is available, without purchase actions or stock notices, and adds a "NOVO" badge.
- * Version: 1.2.2
+ * Version: 1.2.3
  * Author: Bitwise Software
  * Author URI: https://bitwisesoftware.rs/
  * Text Domain: launch-preview-mode
@@ -83,6 +83,7 @@ if ( ! class_exists( 'LPM_Launch_Preview_Mode' ) ) {
 
 			// Frontend behavior.
 			add_filter( 'pre_option_woocommerce_hide_out_of_stock_items', array( $this, 'override_hide_out_of_stock_option' ), 10, 3 );
+			add_filter( 'posts_where', array( $this, 'exclude_non_preview_out_of_stock' ), 10, 2 );
 			add_filter( 'woocommerce_product_is_visible', array( $this, 'filter_product_visibility' ), 10, 2 );
 			add_filter( 'woocommerce_is_purchasable', array( $this, 'disable_purchase_for_preview_products' ), 10, 2 );
 			add_filter( 'woocommerce_variation_is_purchasable', array( $this, 'disable_variation_purchase_for_preview_products' ), 10, 2 );
@@ -468,6 +469,65 @@ if ( ! class_exists( 'LPM_Launch_Preview_Mode' ) ) {
 			}
 
 			return $pre_option;
+		}
+
+		/**
+		 * Real (stored) value of the WooCommerce "hide out of stock" option,
+		 * bypassing our own override.
+		 *
+		 * @return bool
+		 */
+		private function store_hides_out_of_stock() {
+			remove_filter( 'pre_option_woocommerce_hide_out_of_stock_items', array( $this, 'override_hide_out_of_stock_option' ), 10 );
+			$value = get_option( 'woocommerce_hide_out_of_stock_items' );
+			add_filter( 'pre_option_woocommerce_hide_out_of_stock_items', array( $this, 'override_hide_out_of_stock_option' ), 10, 3 );
+
+			return 'yes' === $value;
+		}
+
+		/**
+		 * Because the built-in hide-out-of-stock query filter is disabled on the frontend
+		 * (so preview products can be listed), exclude the other out-of-stock products
+		 * in the query itself. Otherwise they are counted and paginated, then hidden
+		 * at render time, which leaves empty slots and wrong page counts.
+		 *
+		 * @param string   $where Current WHERE clause.
+		 * @param WP_Query $query Query object.
+		 * @return string
+		 */
+		public function exclude_non_preview_out_of_stock( $where, $query ) {
+			global $wpdb;
+
+			if ( ( is_admin() && ! wp_doing_ajax() ) || ! $query instanceof WP_Query || $query->is_singular() ) {
+				return $where;
+			}
+
+			// Taxonomy archives (e.g. product_cat) do not have post_type set on the query yet.
+			$post_type  = $query->get( 'post_type' );
+			$is_product = ( 'product' === $post_type || array( 'product' ) === (array) $post_type )
+				|| $query->is_post_type_archive( 'product' )
+				|| $query->is_tax( get_object_taxonomies( 'product' ) );
+			if ( ! $is_product ) {
+				return $where;
+			}
+
+			if ( ! $this->store_hides_out_of_stock() ) {
+				return $where;
+			}
+
+			$term = get_term_by( 'slug', 'outofstock', 'product_visibility' );
+			if ( ! $term ) {
+				return $where;
+			}
+
+			$where .= $wpdb->prepare(
+				" AND ( {$wpdb->posts}.ID NOT IN ( SELECT object_id FROM {$wpdb->term_relationships} WHERE term_taxonomy_id = %d )
+				OR {$wpdb->posts}.ID IN ( SELECT post_id FROM {$wpdb->postmeta} WHERE meta_key = %s AND meta_value = 'yes' ) )",
+				(int) $term->term_taxonomy_id,
+				self::META_ENABLED
+			);
+
+			return $where;
 		}
 
 		/**

@@ -4,7 +4,7 @@ Tags: catalog, preview, launch, product visibility, badge
 Requires at least: 6.0
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.1
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,9 @@ This plugin is designed to work per product, without changing your normal hidden
 4. Enable "Launch preview mode"
 
 == Changelog ==
+
+= 1.2.3 =
+* Fix: out-of-stock products that are not preview products are now excluded in the product query itself. Previously they were counted and paginated and only hidden at render time, which left empty slots on category pages and wrong result/page counts.
 
 = 1.2.1 =
 * Removed manual load_plugin_textdomain call
