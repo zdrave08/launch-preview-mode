@@ -4,8 +4,8 @@
  * Plugin URI: https://github.com/zdrave08/launch-preview-mode
  * Description: Allows selected products to stay visible before stock is available, without purchase actions or stock notices, and adds a "NOVO" badge.
  * Version: 1.3.0
- * Author: Bitwise Software
- * Author URI: https://bitwisesoftware.rs/
+ * Author: Zdravko Lukic
+ * Author URI: https://github.com/zdrave08
  * Text Domain: launch-preview-mode
  * Domain Path: /languages
  * License: GPL v2 or later
