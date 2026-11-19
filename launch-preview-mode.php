@@ -1,9 +1,9 @@
 <?php
 /**
  * Plugin Name: Launch Preview Mode
- * Plugin URI: https://github.com/bitwisesoftware/launch-preview-mode
+ * Plugin URI: https://github.com/zdrave08/launch-preview-mode
  * Description: Allows selected products to stay visible before stock is available, without purchase actions or stock notices, and adds a "NOVO" badge.
- * Version: 1.2.3
+ * Version: 1.3.0
  * Author: Bitwise Software
  * Author URI: https://bitwisesoftware.rs/
  * Text Domain: launch-preview-mode
@@ -12,7 +12,8 @@
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
  *
  * Requires at least: 6.0
- * Requires PHP: 7.4
+ * Requires PHP: 8.0
+ * WC tested up to: 11.3
  *
  * @package LaunchPreviewMode
  */

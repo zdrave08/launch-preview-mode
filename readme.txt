@@ -2,9 +2,9 @@
 Contributors: bitwise
 Tags: catalog, preview, launch, product visibility, badge
 Requires at least: 6.0
-Tested up to: 6.9
-Requires PHP: 7.4
-Stable tag: 1.2.3
+Tested up to: 7.1
+Requires PHP: 8.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -37,6 +37,11 @@ This plugin is designed to work per product, without changing your normal hidden
 4. Enable "Launch preview mode"
 
 == Changelog ==
+
+= 1.3.0 =
+* Requires PHP 8.0 or newer (was 7.4)
+* Tested up to WordPress 7.1 and WooCommerce 11.3
+* Fixed the Plugin URI (pointed to a repository that does not exist)
 
 = 1.2.3 =
 * Fix: out-of-stock products that are not preview products are now excluded in the product query itself. Previously they were counted and paginated and only hidden at render time, which left empty slots on category pages and wrong result/page counts.

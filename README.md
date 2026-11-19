@@ -23,7 +23,7 @@ Ideal when you want to announce upcoming products online for a short period, but
 ## Requirements
 
 - WordPress 6.0+
-- PHP 7.4+
+- PHP 8.0+
 - WooCommerce active
 
 ## Installation
