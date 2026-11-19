@@ -2,6 +2,11 @@
 
 Small WordPress plugin for product launch previews.
 
+[![WordPress Plugin Version](https://img.shields.io/badge/version-1.3.0-blue.svg)](https://github.com/zdrave08/launch-preview-mode)
+[![WordPress Compatibility](https://img.shields.io/badge/wordpress-6.0%2B-brightgreen.svg)](https://wordpress.org/)
+[![PHP Version](https://img.shields.io/badge/php-8.0%2B-purple.svg)](https://php.net/)
+[![License](https://img.shields.io/badge/license-GPLv2-red.svg)](https://www.gnu.org/licenses/gpl-2.0.html)
+
 ## What it does
 
 This plugin lets selected products stay publicly visible before stock is available, while preventing purchase.
